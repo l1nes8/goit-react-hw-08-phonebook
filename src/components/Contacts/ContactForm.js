@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import css from '../form.module.css';
+import css from 'form.module.css';
 
 export default function ContactForm({ contacts, onAddContact }) {
   const [name, setName] = useState('');
