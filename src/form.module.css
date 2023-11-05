@@ -2,11 +2,51 @@
   margin-top: 20px;
   display: block;
   outline: none;
-  border: hsl(0, 0%, 0%, 50%) solid 2px;
+  border: hsla(0, 0%, 100%, 0.5) solid 2px;
   border-radius: 5px;
-  background-color: transparent;
+  background-color: #008080;
+  color: white;
+  padding: 8px;
+  margin-bottom: 12px;
+}
+
+.loginAndRegisteBtn {
+  display: block;
+
+  margin-top: 20px;
+
+  outline: none;
+  border: hsla(0, 0%, 100%, 0.5) solid 2px;
+  border-radius: 5px;
+
+  padding: 8px 20px;
+  margin-bottom: 12px;
+
+  background-color: #008080;
+  color: white;
+  font-size: large;
 }
 
 .item {
   margin-bottom: 5px;
+}
+
+.bckColor {
+  background-color: rgb(145, 145, 145);
+}
+
+.btnBlock {
+  margin-left: 12px;
+}
+
+.logOutBtn {
+  margin-bottom: 12px;
+}
+
+.listContact {
+  margin-top: 12px;
+}
+
+.deleteContact {
+  margin-left: 6px;
 }

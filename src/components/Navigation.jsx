@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectAuthenticated } from 'redux/auth.selector';
 import { logOutThunk } from 'redux/authReducer';
+import { Button, ButtonGroup } from '@chakra-ui/react';
+import css from 'form.module.css';
 
 export const Navigation = () => {
   const authenticated = useSelector(selectAuthenticated);
@@ -15,27 +17,43 @@ export const Navigation = () => {
   return (
     <header>
       <nav>
-        <NavLink to="/">
-          <li>Home</li>
-        </NavLink>
+        <ButtonGroup gap="4">
+          <NavLink to="/">
+            <Button colorScheme="green">
+              <p>Home</p>
+            </Button>
+          </NavLink>
 
-        {authenticated ? (
-          <>
-            <NavLink to="/contacts">
-              <li>Contacts</li>
-            </NavLink>
-            <button onClick={onLogOut}>Log Out</button>
-          </>
-        ) : (
-          <>
-            <NavLink to="/login">
-              <li>Login</li>
-            </NavLink>
-            <NavLink to="/register">
-              <li>Register</li>
-            </NavLink>
-          </>
-        )}
+          {authenticated ? (
+            <>
+              <NavLink to="/contacts">
+                <Button colorScheme="green">
+                  <p>Contacts</p>
+                </Button>
+              </NavLink>
+              <Button
+                colorScheme="red"
+                className={css.logOutBtn}
+                onClick={onLogOut}
+              >
+                Log Out
+              </Button>
+            </>
+          ) : (
+            <>
+              <NavLink to="/login">
+                <Button colorScheme="green">
+                  <p>Login</p>
+                </Button>
+              </NavLink>
+              <NavLink to="/register">
+                <Button colorScheme="green">
+                  <p>Register</p>
+                </Button>
+              </NavLink>
+            </>
+          )}
+        </ButtonGroup>
       </nav>
     </header>
   );

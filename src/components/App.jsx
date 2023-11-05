@@ -8,6 +8,8 @@ import { refreshThunk } from 'redux/authReducer';
 import RestictedRoute from './RestictedRoute';
 import PrivateRoute from './PrivateRoute';
 
+import css from 'form.module.css';
+
 const Home = lazy(() => import('./HomePage'));
 const Contact = lazy(() => import('./Contacts/Contact'));
 const Login = lazy(() => import('./Login'));

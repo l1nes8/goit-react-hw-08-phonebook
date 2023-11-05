@@ -1,4 +1,5 @@
 import React from 'react';
+import { Input } from '@chakra-ui/react';
 
 export default function Filter({ filter, onFilterChange }) {
   const handleChange = e => {
@@ -6,7 +7,10 @@ export default function Filter({ filter, onFilterChange }) {
   };
 
   return (
-    <input
+    <Input
+      size="md"
+      width="240px"
+      variant="filled"
       type="text"
       value={filter}
       onChange={handleChange}

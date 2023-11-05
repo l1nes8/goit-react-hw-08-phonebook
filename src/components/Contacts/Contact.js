@@ -2,13 +2,20 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { RotatingLines } from 'react-loader-spinner';
+import {
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+} from '@chakra-ui/react';
+import { Text } from '@chakra-ui/react';
 
 import {
   fetchContacts,
   addContacthContacts,
   deleteContacts,
   setFilter,
-} from 'redux/contacts';
+} from 'redux/contactsReucer';
 import {
   selectContacts,
   selectIsLoading,
@@ -58,9 +65,11 @@ const Contact = () => {
 
   return (
     <div>
-      <h1>Phonebook</h1>
+      <Text fontSize="30px" as="b">
+        Phonebook
+      </Text>
       <ContactForm onAddContact={handleAddContact} contacts={contacts} />
-      <h2>Contacts</h2>
+      <FormLabel>Contacts</FormLabel>
       {isLoading && (
         <RotatingLines
           strokeColor="grey"

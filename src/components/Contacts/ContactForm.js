@@ -1,4 +1,12 @@
 import React, { useState } from 'react';
+import { Input } from '@chakra-ui/react';
+import { Button, ButtonGroup } from '@chakra-ui/react';
+import {
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+} from '@chakra-ui/react';
 import css from 'form.module.css';
 
 export default function ContactForm({ contacts, onAddContact }) {
@@ -33,8 +41,11 @@ export default function ContactForm({ contacts, onAddContact }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <p>Name</p>
-      <input
+      <FormLabel>Name</FormLabel>
+      <Input
+        size="md"
+        width="240px"
+        variant="filled"
         type="text"
         name="name"
         value={name}
@@ -42,8 +53,11 @@ export default function ContactForm({ contacts, onAddContact }) {
         placeholder="Name"
         required
       />
-      <p>Phone</p>
-      <input
+      <FormLabel>Phone</FormLabel>
+      <Input
+        size="md"
+        width="240px"
+        variant="filled"
         type="tel"
         name="number"
         value={number}
