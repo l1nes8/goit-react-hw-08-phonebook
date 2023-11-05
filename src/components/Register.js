@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { registerThunk } from 'redux/authReducer';
 import { useForm } from 'react-hook-form';
 import css from 'form.module.css';
-import { FormControl, FormLabel, FormHelperText } from '@chakra-ui/react';
+import { FormLabel, FormHelperText } from '@chakra-ui/react';
 import { Input } from '@chakra-ui/react';
 
 const RegisterPage = () => {
@@ -21,7 +21,7 @@ const RegisterPage = () => {
   };
 
   return (
-    <FormControl onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <label>
         <FormLabel>Email:</FormLabel>
         <Input
@@ -61,7 +61,7 @@ const RegisterPage = () => {
       <button className={css.loginAndRegisteBtn} type="submit">
         Sign Up
       </button>
-    </FormControl>
+    </form>
   );
 };
 
