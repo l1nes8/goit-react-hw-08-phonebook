@@ -6,7 +6,6 @@ import { loginThunk } from 'redux/authReducer';
 import css from 'form.module.css';
 import { FormLabel } from '@chakra-ui/react';
 import { Input } from '@chakra-ui/react';
-import { Button, ButtonGroup } from '@chakra-ui/react';
 
 const LoginPage = () => {
   const {
