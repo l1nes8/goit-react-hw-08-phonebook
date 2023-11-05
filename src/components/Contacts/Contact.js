@@ -2,12 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { RotatingLines } from 'react-loader-spinner';
-import {
-  FormControl,
-  FormLabel,
-  FormErrorMessage,
-  FormHelperText,
-} from '@chakra-ui/react';
+import { FormLabel } from '@chakra-ui/react';
 import { Text } from '@chakra-ui/react';
 
 import {

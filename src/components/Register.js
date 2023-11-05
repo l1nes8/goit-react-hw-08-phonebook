@@ -3,14 +3,8 @@ import { useDispatch } from 'react-redux';
 import { registerThunk } from 'redux/authReducer';
 import { useForm } from 'react-hook-form';
 import css from 'form.module.css';
-import {
-  FormControl,
-  FormLabel,
-  FormErrorMessage,
-  FormHelperText,
-} from '@chakra-ui/react';
+import { FormControl, FormLabel, FormHelperText } from '@chakra-ui/react';
 import { Input } from '@chakra-ui/react';
-import { Button, ButtonGroup } from '@chakra-ui/react';
 
 const RegisterPage = () => {
   const {

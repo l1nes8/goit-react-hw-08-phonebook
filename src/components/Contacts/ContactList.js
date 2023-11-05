@@ -1,13 +1,7 @@
 import React from 'react';
 import css from 'form.module.css';
-import {
-  List,
-  ListItem,
-  ListIcon,
-  OrderedList,
-  UnorderedList,
-} from '@chakra-ui/react';
-import { Button, ButtonGroup } from '@chakra-ui/react';
+import { ListItem, OrderedList } from '@chakra-ui/react';
+import { Button } from '@chakra-ui/react';
 
 export default function ContactList({ contacts, onDeleteContact }) {
   return (

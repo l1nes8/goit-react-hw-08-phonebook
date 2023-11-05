@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
 import { Input } from '@chakra-ui/react';
-import { Button, ButtonGroup } from '@chakra-ui/react';
-import {
-  FormControl,
-  FormLabel,
-  FormErrorMessage,
-  FormHelperText,
-} from '@chakra-ui/react';
+import { FormLabel } from '@chakra-ui/react';
 import css from 'form.module.css';
 
 export default function ContactForm({ contacts, onAddContact }) {
