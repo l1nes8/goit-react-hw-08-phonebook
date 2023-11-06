@@ -12,9 +12,9 @@ export const Navigation = () => {
   const authenticated = useSelector(selectAuthenticated);
   const dispatch = useDispatch();
 
-  const onLogOut = () => {
-    dispatch(logOutThunk());
-  };
+  // const onLogOut = () => {
+  //   dispatch(logOutThunk());
+  // };
 
   return (
     <header>
