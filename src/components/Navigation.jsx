@@ -3,14 +3,14 @@ import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button, ButtonGroup } from '@chakra-ui/react';
 
-import { logOutThunk } from 'redux/authReducer';
+// import { logOutThunk } from 'redux/authReducer';
 import { UserMenu } from './UserMenu.js';
 
 import { selectAuthenticated } from 'redux/auth.selector';
 
 export const Navigation = () => {
   const authenticated = useSelector(selectAuthenticated);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   // const onLogOut = () => {
   //   dispatch(logOutThunk());
