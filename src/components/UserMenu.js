@@ -1,8 +1,12 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+
 import { logOutThunk } from 'redux/authReducer';
-import { Button } from '@chakra-ui/react';
 import { selectUserEmail } from 'redux/auth.selector';
+
+import { Text } from '@chakra-ui/react';
+import { Button } from '@chakra-ui/react';
+
 import css from 'form.module.css';
 
 export const UserMenu = () => {
@@ -15,10 +19,14 @@ export const UserMenu = () => {
 
   return (
     <div>
-      <p>{userEmail}</p>
       <Button colorScheme="red" className={css.logOutBtn} onClick={onLogOut}>
         Log Out
       </Button>
+      <div>
+        <Text as="b" className={css.userMail}>
+          {userEmail}
+        </Text>
+      </div>
     </div>
   );
 };

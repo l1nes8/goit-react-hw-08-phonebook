@@ -7,7 +7,6 @@ import { logOutThunk } from 'redux/authReducer';
 import { UserMenu } from './UserMenu.js';
 
 import { selectAuthenticated } from 'redux/auth.selector';
-import css from 'form.module.css';
 
 export const Navigation = () => {
   const authenticated = useSelector(selectAuthenticated);
