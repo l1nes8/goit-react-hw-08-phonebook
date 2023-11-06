@@ -1,9 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectAuthenticated } from 'redux/auth.selector';
-import { logOutThunk } from 'redux/authReducer';
 import { Button, ButtonGroup } from '@chakra-ui/react';
+
+import { logOutThunk } from 'redux/authReducer';
+import { UserMenu } from './UserMenu.js';
+
+import { selectAuthenticated } from 'redux/auth.selector';
 import css from 'form.module.css';
 
 export const Navigation = () => {
@@ -31,13 +34,14 @@ export const Navigation = () => {
                   <p>Contacts</p>
                 </Button>
               </NavLink>
-              <Button
+              <UserMenu />
+              {/* <Button
                 colorScheme="red"
                 className={css.logOutBtn}
                 onClick={onLogOut}
               >
                 Log Out
-              </Button>
+              </Button> */}
             </>
           ) : (
             <>
